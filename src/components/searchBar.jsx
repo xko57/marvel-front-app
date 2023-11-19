@@ -8,7 +8,6 @@ const SearchBar = ({ setSearchText, setCurrentPage }) => {
   return (
     <div className="search-bar-component">
       <input
-        className="search-input"
         type="text"
         placeholder="Taper ici votre recherche"
         onChange={(event) => handleSearchChange(event)}
