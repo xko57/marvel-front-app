@@ -1,0 +1,85 @@
+.card-container {
+  width: 168px;
+  height: 292px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  justify-content: space-between;
+  padding: 0 5px;
+  background-color: #debe8b;
+}
+.card {
+  width: 168px;
+  height: 252px;
+  perspective: 1000px;
+}
+.card h3 {
+  height: 20px;
+}
+
+.face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 1.5s;
+}
+
+.front-face img {
+  width: 168px;
+  height: 252px;
+}
+
+.back-face {
+  background-color: #debe8b;
+  transform: rotateY(180deg);
+}
+
+.card:not(:hover) .front-face {
+  transform: rotateY(0deg);
+}
+
+.card:hover .front-face {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .back-face {
+  transform: rotateY(0deg);
+}
+
+.card-fav {
+  width: 15px;
+  height: 15px;
+}
+.card-fav img,
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.card-description img {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.back-face {
+  overflow: hidden scroll;
+  padding: 5px;
+}
+
+.back-face::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.back-face {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
